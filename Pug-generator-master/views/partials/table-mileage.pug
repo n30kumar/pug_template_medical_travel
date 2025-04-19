@@ -1,0 +1,15 @@
+//- views/partials/table-mileage.pug
+table
+  thead
+    tr
+      th Appointment Date
+      th Address of Healthcare Provider/Medical Facility
+      th Address of Workplace
+      th Number of km (Round Trip)
+  tbody
+    each item in data.mileage
+      tr
+        td= item.date
+        td= item.facility
+        td= item.workplace
+        td= item.km

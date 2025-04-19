@@ -1,0 +1,16 @@
+table
+  thead
+    tr
+      th Drug Name
+      th Date Purchased
+      th Paid Amount
+      th Seller's Name
+      th Reason for Purchasing
+  tbody
+    each item in data.otc
+      tr
+        td= item.name
+        td= item.purchased
+        td= item.amount
+        td= item.seller
+        td= item.reason

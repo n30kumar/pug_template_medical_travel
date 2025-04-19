@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Medical & Travel Expense Request
+    link(rel="stylesheet", href="/css/style.css")
+    script(src="/js/main.js", defer)
+  body
+    header
+      h1 333 Broadway
+      p Winnipeg, MB R3C 4W3 | Phone: (204) 954-4321 | Toll Free: 1-855-954-4321
+      p wcb.mb.ca
+    .form-title
+      h2 Medical & Travel Expense Request
+      .switch
+        button(onclick="switchData()") Switch to Data Set #{datasetId === '1' ? '2' : '1'}
+    section.info
+      p Worker App ID: #{data.worker.id}  Submitted: #{data.worker.submitted}
+    //- Sections
+    .section
+      h3 Prescription Drugs
+      include ./partials/table-prescription.pug
+    .section
+      h3 Over-the-Counter Drugs
+      include ./partials/table-otc.pug
+    .section
+      h3 Bandages, Braces or Other Medical Supplies
+      include ./partials/table-supplies.pug
+    .section
+      h3 Parking for Medical Appointments
+      include ./partials/table-parking.pug
+    .section
+      h3 Mileage to Medical Appointments
+      include ./partials/table-mileage.pug
+    .section
+      h3 Bus or Taxi Fare for Medical Appointments
+      include ./partials/table-transit.pug
+    footer.print-footer
+      span ☑️
+      span I understand that the Privacy Notice applies to the personal information collected in this document.

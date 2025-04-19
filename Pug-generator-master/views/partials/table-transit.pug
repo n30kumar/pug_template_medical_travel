@@ -1,0 +1,17 @@
+//- views/partials/table-transit.pug
+table
+  thead
+    tr
+      th Appointment Date
+      th Address of Starting Point
+      th Address of Healthcare Provider/Medical Facility
+      th Bus or Taxi (indicate one)
+      th Total Fare Paid
+  tbody
+    each item in data.transit
+      tr
+        td= item.date
+        td= item.from
+        td= item.to
+        td= item.method
+        td= item.fare

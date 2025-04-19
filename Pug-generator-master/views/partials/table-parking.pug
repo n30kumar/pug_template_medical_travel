@@ -1,0 +1,15 @@
+//- views/partials/table-parking.pug
+table
+  thead
+    tr
+      th Address of Healthcare Provider/Medical Facility
+      th Date Paid
+      th Amount
+      th Meter Number
+  tbody
+    each item in data.parking
+      tr
+        td= item.address
+        td= item.date
+        td= item.amount
+        td= item.meter

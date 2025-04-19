@@ -1,0 +1,17 @@
+//- views/partials/table-supplies.pug
+table
+  thead
+    tr
+      th Item Purchased
+      th Date Purchased
+      th Was this Prescribed?
+      th Paid Amount
+      th Seller's Name
+  tbody
+    each item in data.supplies
+      tr
+        td= item.item
+        td= item.purchased
+        td= item.prescribed
+        td= item.amount
+        td= item.seller

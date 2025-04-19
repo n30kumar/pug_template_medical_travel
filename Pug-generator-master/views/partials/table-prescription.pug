@@ -1,0 +1,14 @@
+table
+  thead
+    tr
+      th Drug Name
+      th Date Purchased
+      th Healthcare Provider Name
+      th Paid Amount
+  tbody
+    each item in data.prescription
+      tr
+        td= item.name
+        td= item.purchased
+        td= item.provider
+        td= item.amount
